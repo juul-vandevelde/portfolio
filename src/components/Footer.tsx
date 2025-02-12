@@ -16,7 +16,7 @@ function Footer() {
           LinkedIn
         </Link>
         <Link
-          href="https://github.com/juul-vandevelde-howest"
+          href="https://github.com/juul-vandevelde"
           rel="noopener noreferrer"
           target="_blank"
           className="sm:text-xl hover:underline"

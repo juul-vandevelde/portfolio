@@ -19,7 +19,7 @@ function Works() {
         src={spotify}
         alt="Mockup of a project called Spotify Playlist Viewer"
         description="design / development"
-        link="https://github.com/juul-vandevelde-howest/Interaction-Design-Eindopdracht"
+        link="https://github.com/juul-vandevelde/Interaction-Design-Eindopdracht"
         mirror={true}
       />
       <Work
@@ -27,7 +27,7 @@ function Works() {
         src={flashcards}
         alt="Mockup of a Flashcards App"
         description="design / development"
-        link="https://github.com/juul-vandevelde-howest/smartAppDev-eindopdracht"
+        link="https://github.com/juul-vandevelde/smartAppDev-eindopdracht"
       />
     </Section>
   )
