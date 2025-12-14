@@ -79,6 +79,8 @@ function Skills() {
                 className="w-full cursor-default! py-1 xs:py-2 text-left text-stone-500 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none md:py-3 lg:py-4"
                 onMouseEnter={() => setCurrentHover(skill.name)}
                 onMouseLeave={() => setCurrentHover(null)}
+                onFocus={() => setCurrentHover(skill.name)}
+                onBlur={() => setCurrentHover(null)}
                 onClick={() => setCurrentHover(skill.name)}
               >
                 {skill.name}
