@@ -9,7 +9,7 @@ import Works from '@/components/Works'
 export default function Home() {
   return (
     <main className="bg-background text-foreground">
-      <div className="xs:px-12 px-4 transition-all duration-300 sm:mx-auto sm:max-w-screen-2xl md:px-16">
+      <div className="px-4 xs:px-12 transition-all duration-300 sm:mx-auto sm:max-w-(--breakpoint-2xl) md:px-16">
         <Header />
         <About />
         <Skills />

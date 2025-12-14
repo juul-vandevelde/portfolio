@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
-import Section from './Section'
-import UIUX from '../../public/assets/ui-design.jpg'
-import dog from '../../public/assets/doggo.jpg'
-import frontend from '../../public/assets/frontend.jpg'
+import { useState } from 'react'
 import backend from '../../public/assets/backend.jpg'
+import dog from '../../public/assets/doggo.jpg'
 import flutter from '../../public/assets/flutter.jpg'
+import frontend from '../../public/assets/frontend.jpg'
+import UIUX from '../../public/assets/ui-design.jpg'
+import Section from './Section'
 
 function Skills() {
   const [currentHover, setCurrentHover] = useState<string | null>(null)
@@ -71,16 +71,20 @@ function Skills() {
               : 'select a topic to see my skills'}
           </span>
         </div>
-        <ul className="cursor-default text-2xl font-bold xs:text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <ul className="cursor-default font-bold text-2xl xs:text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           {skills.map(skill => (
-            <li
-              key={skill.name}
-              className="py-1 text-stone-500 hover:text-foreground xs:py-2 md:py-3 lg:py-4"
-              onMouseEnter={() => setCurrentHover(skill.name)}
-              onMouseLeave={() => setCurrentHover(null)}
-              onClick={() => setCurrentHover(skill.name)}
-            >
-              {skill.name}
+            <li key={skill.name}>
+              <button
+                type="button"
+                className="w-full cursor-default! py-1 xs:py-2 text-left text-stone-500 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none md:py-3 lg:py-4"
+                onMouseEnter={() => setCurrentHover(skill.name)}
+                onMouseLeave={() => setCurrentHover(null)}
+                onFocus={() => setCurrentHover(skill.name)}
+                onBlur={() => setCurrentHover(null)}
+                onClick={() => setCurrentHover(skill.name)}
+              >
+                {skill.name}
+              </button>
             </li>
           ))}
         </ul>
