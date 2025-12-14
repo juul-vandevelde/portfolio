@@ -18,7 +18,7 @@ function Work({
 }) {
   return (
     <div
-      className={`my-14 flex flex-col sm:my-12 sm:flex-row md:my-14 lg:my-16 xl:my-20 ${mirror ? 'sm:flex-row-reverse' : 'flex-row'} sm:items-end gap-5 md:gap-6 lg:gap-7 xl:gap-8`}
+      className={`my-14 flex flex-col sm:my-12 sm:flex-row md:my-14 lg:my-16 xl:my-20 ${mirror ? 'sm:flex-row-reverse' : 'sm:flex-row'} sm:items-end gap-5 md:gap-6 lg:gap-7 xl:gap-8`}
     >
       <div className="sm:w-1/2 overflow-hidden">
         <Image
