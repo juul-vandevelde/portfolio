@@ -1,9 +1,9 @@
 'use client'
 
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react'
-import Section from './Section'
-import { useState } from 'react'
 import Link from 'next/link'
+import { useState } from 'react'
+import Section from './Section'
 
 function Reviews() {
   interface Review {

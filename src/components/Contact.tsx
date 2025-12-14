@@ -1,6 +1,6 @@
 'use client'
-import { useCallback, useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 function Contact() {
   const [isHovered, setIsHovered] = useState(false)
@@ -67,7 +67,9 @@ function Contact() {
       <div
         id="contact"
         ref={slider}
-        className={`flex cursor-pointer overflow-hidden whitespace-nowrap text-4xl font-bold italic sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl ${isHovered && 'justify-center'}`}
+        className={`flex cursor-pointer overflow-hidden whitespace-nowrap text-4xl font-bold italic sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl ${
+          isHovered && 'justify-center'
+        }`}
         onMouseEnter={() => {
           handleMouseEnter()
         }}

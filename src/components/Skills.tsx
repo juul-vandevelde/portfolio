@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
-import Section from './Section'
-import UIUX from '../../public/assets/ui-design.jpg'
-import dog from '../../public/assets/doggo.jpg'
-import frontend from '../../public/assets/frontend.jpg'
+import { useState } from 'react'
 import backend from '../../public/assets/backend.jpg'
+import dog from '../../public/assets/doggo.jpg'
 import flutter from '../../public/assets/flutter.jpg'
+import frontend from '../../public/assets/frontend.jpg'
+import UIUX from '../../public/assets/ui-design.jpg'
+import Section from './Section'
 
 function Skills() {
   const [currentHover, setCurrentHover] = useState<string | null>(null)

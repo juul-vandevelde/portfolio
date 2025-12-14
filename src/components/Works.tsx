@@ -1,8 +1,8 @@
-import Section from './Section'
-import Work from './Work'
+import flashcards from '../../public/assets/flashcards-mockup.jpg'
 import pebbles from '../../public/assets/pebbles-mockup.jpg'
 import spotify from '../../public/assets/spotify-playlist-viewer-mockup.jpg'
-import flashcards from '../../public/assets/flashcards-mockup.jpg'
+import Section from './Section'
+import Work from './Work'
 
 function Works() {
   return (
