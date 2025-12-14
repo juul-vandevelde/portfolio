@@ -30,7 +30,7 @@ function About() {
             endeavor
           </p>
         </article>
-        <div className="sticky bottom-0 py-4 pr-4 text-right text-4xl  font-bold uppercase italic sm:py-0 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+        <div className="sticky bottom-0 py-4 pr-4 text-right font-bold text-4xl uppercase italic sm:py-0 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
           full
           <br />
           stack

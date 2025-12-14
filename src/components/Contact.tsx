@@ -97,7 +97,7 @@ function Contact() {
         type="button"
         id="contact"
         ref={slider}
-        className="relative flex w-full justify-center overflow-hidden whitespace-nowrap text-4xl font-bold italic sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+        className="relative flex w-full justify-center overflow-hidden whitespace-nowrap font-bold text-4xl italic sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
         onMouseEnter={() => {
           handleMouseEnter()
         }}
@@ -131,7 +131,7 @@ function Contact() {
             </span>
           </div>
         ) : (
-          <span className="text-xl uppercase italic xxs:text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <span className="text-xl xs:text-4xl xxs:text-2xl uppercase italic sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             {isCopied ? 'email copied :)' : 'click to copy email'}
           </span>
         )}

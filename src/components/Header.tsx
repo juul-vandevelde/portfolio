@@ -55,7 +55,7 @@ function Header() {
         Juul Van de Velde
       </Link>
       <nav className="ml-auto flex flex-row justify-end sm:w-1/2 sm:justify-between">
-        <ul className="md:text-md hidden flex-row font-medium sm:flex sm:gap-5 md:gap-8 lg:text-lg xl:text-xl">
+        <ul className="hidden flex-row font-medium sm:flex sm:gap-5 md:gap-8 md:text-md lg:text-lg xl:text-xl">
           <li className="hover:underline">
             <a href="#skills">Skills</a>
           </li>

@@ -42,7 +42,7 @@ function Reviews() {
 
   return (
     <Section title="what<br />others say" id="reviews">
-      <div className="mb-10 mt-5 flex flex-col sm:mb-24 sm:mt-12 sm:flex-row sm:gap-6 md:mb-28 md:mt-14 md:gap-8 lg:mb-32 lg:mt-16 lg:gap-10 xl:mb-40 xl:mt-20 xl:gap-12">
+      <div className="mt-5 mb-10 flex flex-col gap-4 sm:mt-12 sm:mb-24 sm:flex-row sm:gap-6 md:mt-14 md:mb-28 md:gap-8 lg:mt-16 lg:mb-32 lg:gap-10 xl:mt-20 xl:mb-40 xl:gap-12">
         <div className="grid border-2 border-foreground p-5 sm:w-7/12 sm:p-10 md:p-11 lg:p-12 xl:p-16">
           {reviews.map((review, index) => (
             <div
@@ -57,7 +57,7 @@ function Reviews() {
                 <Link
                   href={review.link}
                   rel="noopener noreferrer"
-                  className="italic hover:underline xs:text-base md:text-lg lg:text-xl xl:text-2xl"
+                  className="xs:text-base italic hover:underline md:text-lg lg:text-xl xl:text-2xl"
                   target="_blank"
                   tabIndex={index === currentIndex ? 0 : -1}
                 >
