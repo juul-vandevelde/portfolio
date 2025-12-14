@@ -1,6 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-fold: 290px;
+  --breakpoint-xxs: 326px;
+  --breakpoint-xs: 520px;
+  --breakpoint-sm: 750px;
+  --breakpoint-md: 920px;
+  --breakpoint-lg: 1075px;
+  --breakpoint-xl: 1400px;
+
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-secondary: var(--secondary);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
   --foreground: #0c0a09; /* tailwind stone 950 */

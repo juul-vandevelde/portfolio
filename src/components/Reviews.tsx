@@ -64,7 +64,7 @@ function Reviews() {
         </div>
         <div className="flex w-5/12 flex-col justify-between">
           <div className="hidden border-2 border-foreground p-8 sm:block">
-            <div className="bg-gradient-to-b from-foreground to-60% bg-clip-text pb-12 text-transparent">
+            <div className="bg-linear-to-b from-foreground to-60% bg-clip-text pb-12 text-transparent">
               {reviews[(currentIndex + 1) % reviews.length].text
                 .slice(0, 100)
                 .split(' ')
