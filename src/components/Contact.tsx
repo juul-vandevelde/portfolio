@@ -53,8 +53,8 @@ function Contact() {
       return
     }
 
-    // Small delay to ensure refs are attached after render
-    const timeoutId = setTimeout(() => {
+    const setupAnimation = () => {
+      // Small delay to ensure refs are attached after render
       const textWidth = firstText.current?.getBoundingClientRect().width || 0
 
       if (secondText.current) {
@@ -68,11 +68,23 @@ function Contact() {
       }
 
       xPercentRef.current = 0
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
       animationRef.current = requestAnimationFrame(animate)
-    }, 0)
+    }
+
+    const timeoutId = setTimeout(setupAnimation, 0)
+
+    const handleResize = () => {
+      setupAnimation()
+    }
+
+    window.addEventListener('resize', handleResize)
 
     return () => {
       clearTimeout(timeoutId)
+      window.removeEventListener('resize', handleResize)
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
