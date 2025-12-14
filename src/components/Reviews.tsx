@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowLeft, ArrowRight } from '@phosphor-icons/react'
+import { ArrowLeftIcon, ArrowRightIcon } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { useState } from 'react'
 import Section from './Section'
@@ -77,11 +77,15 @@ function Reviews() {
             </div>
           </div>
           <div className="flex flex-row gap-8">
-            <button onClick={handlePrevious} aria-label="Previous review">
-              <ArrowLeft size={64} />
+            <button
+              type="button"
+              onClick={handlePrevious}
+              aria-label="Previous review"
+            >
+              <ArrowLeftIcon size={64} weight="bold" />
             </button>
-            <button onClick={handleNext} aria-label="Next review">
-              <ArrowRight size={64} />
+            <button type="button" onClick={handleNext} aria-label="Next review">
+              <ArrowRightIcon size={64} weight="bold" />
             </button>
           </div>
         </div>

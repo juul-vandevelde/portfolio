@@ -73,14 +73,16 @@ function Skills() {
         </div>
         <ul className="cursor-default text-2xl font-bold xs:text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           {skills.map(skill => (
-            <li
-              key={skill.name}
-              className="py-1 text-stone-500 hover:text-foreground xs:py-2 md:py-3 lg:py-4"
-              onMouseEnter={() => setCurrentHover(skill.name)}
-              onMouseLeave={() => setCurrentHover(null)}
-              onClick={() => setCurrentHover(skill.name)}
-            >
-              {skill.name}
+            <li key={skill.name}>
+              <button
+                type="button"
+                className="w-full cursor-default! py-1 text-left text-stone-500 hover:text-foreground focus-visible:text-foreground focus-visible:outline-none xs:py-2 md:py-3 lg:py-4"
+                onMouseEnter={() => setCurrentHover(skill.name)}
+                onMouseLeave={() => setCurrentHover(null)}
+                onClick={() => setCurrentHover(skill.name)}
+              >
+                {skill.name}
+              </button>
             </li>
           ))}
         </ul>

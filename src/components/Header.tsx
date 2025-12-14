@@ -1,6 +1,6 @@
 'use client'
 
-import { Moon, Sun } from '@phosphor-icons/react'
+import { MoonIcon, SunIcon } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
@@ -18,8 +18,7 @@ function Header() {
         if (localTheme) {
           return localTheme === 'dark'
         } else if (
-          window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches
+          window.matchMedia?.('(prefers-color-scheme: dark)').matches
         ) {
           return true
         }
@@ -70,15 +69,19 @@ function Header() {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <button onClick={switchTheme} aria-label="Toggle Dark/Light Mode">
+        <button
+          type="button"
+          onClick={switchTheme}
+          aria-label="Toggle Dark/Light Mode"
+        >
           {isDarkTheme ? (
             <>
-              <Moon
+              <MoonIcon
                 size={24}
                 weight="fill"
                 className="inline-block lg:hidden"
               />
-              <Moon
+              <MoonIcon
                 size={32}
                 weight="fill"
                 className="hidden lg:inline-block"
@@ -86,8 +89,16 @@ function Header() {
             </>
           ) : (
             <>
-              <Sun size={24} weight="fill" className="inline-block lg:hidden" />
-              <Sun size={32} weight="fill" className="hidden lg:inline-block" />
+              <SunIcon
+                size={24}
+                weight="fill"
+                className="inline-block lg:hidden"
+              />
+              <SunIcon
+                size={32}
+                weight="fill"
+                className="hidden lg:inline-block"
+              />
             </>
           )}
         </button>

@@ -29,12 +29,14 @@ function Work({
         />
       </div>
       <div className={`${mirror ? 'sm:text-right' : ''}`}>
-        <div
-          className="font-bold leading-tight pb-1 text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:pb-2 xl:text-6xl"
-          dangerouslySetInnerHTML={{
-            __html: title.replace(/<br\s*\/?>/gi, '<br />'),
-          }}
-        ></div>
+        <div className="font-bold leading-tight pb-1 text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:pb-2 xl:text-6xl">
+          {title.split(/<br\s*\/?>/gi).map((part, index, array) => (
+            <span key={part}>
+              {part}
+              {index < array.length - 1 && <br />}
+            </span>
+          ))}
+        </div>
         <div className="font-light italic pb-1 md:pb-2 md:text-lg lg:pb-3 lg:text-xl xl:pb-4 xl:text-2xl">
           {description}
         </div>
